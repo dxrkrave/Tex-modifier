@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import { Navbar } from './components/Navbar'
 import TextForm from './components/TextForm'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 
 function App() {
@@ -21,23 +20,28 @@ function App() {
   return (
     <>
       <div data-bs-theme={`${isDarkMode ? "dark" : ""}`}>
-        {/* <Navbar/> */}
-        {/* <About/> */}
-        <Router>
+      </div>
+
+      {/* <Navbar/> */}
+      {/* <About/> */}
+
+      {/* <Router> */}
+        <div>
           <Navbar title="Text Editor" style={{ backgroundColor: 'black' }} id={toggleMode} />
+        
           <div className="container my-3"  >
-            <Switch>
+            {/* <Switch>
               <Route exact path="/about">
                 <About />
               </Route>
-              <Route exact path="/">
+              <Route exact path="/"> */}
                 <TextForm heading="Enter The Text Here" />
-              </Route>
-            </Switch>
-            <About />
+              {/* </Route>
+            </Switch> */}
+            {/* <About /> */}
           </div>
-        </Router>
-      </div>
+        </div>
+      {/* </Router> */}
     </>
   );
 }
